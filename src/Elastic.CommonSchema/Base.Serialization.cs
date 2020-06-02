@@ -103,7 +103,7 @@ namespace Elastic.CommonSchema
 				Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
 				Indented = false
 			});
-			JsonSerializer.Serialize(writer, this, JsonConfiguration.SerializerOptions);
+			JsonSerializer.Serialize(writer, this, SerializerOptions);
 		}
 
 		public Task SerializeAsync(Stream stream, CancellationToken ctx = default) =>

@@ -34,7 +34,7 @@ namespace Elastic.CommonSchema.Serialization
 				"message" => ReadProp<string>(ref reader, "message", ecsEvent, (b, v) => b.Message = v),
 				"_metadata" => ReadProp<IDictionary<string, object>>(ref reader, "_metadata", ecsEvent, (b, v) => b.Metadata = v),
 				"tags" => ReadProp<string[]>(ref reader, "tags", ecsEvent, (b, v) => b.Tags = v),
-				"labels" => ReadProp<IDictionary<string, object>>(ref reader, "labels", ecsEvent, (b, v) => b.Labels = v),
+				"labels" => ReadProp<IDictionary<string, string>>(ref reader, "labels", ecsEvent, (b, v) => b.Labels = v),
 				"trace" => ReadProp<Trace>(ref reader, "trace", ecsEvent, (b, v) => b.Trace = v),
 				"transaction" => ReadProp<Transaction>(ref reader, "transaction", ecsEvent, (b, v) => b.Transaction = v),
 				"agent" => ReadProp<Agent>(ref reader, "agent", ecsEvent, (b, v) => b.Agent = v),

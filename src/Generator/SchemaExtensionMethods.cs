@@ -48,7 +48,7 @@ namespace Generator.Schema
 				value.FlatName == "registry.data.strings";
 
 			// Special cases.
-			if (value.FlatName == "labels") return "IDictionary<string, object>";
+			if (value.FlatName == "labels") return "IDictionary<string, string>";
 
 			// C# custom property
 			if (value.Name == "_metadata") return "IDictionary<string, object>";
